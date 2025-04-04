@@ -6,7 +6,7 @@ const clerkWebHooks=async (req,res)=>{
   await whook.verify(JSON.stringify(req.body),{
     "svix-id":req.headers["svix-id"],
     "svix-timestamp":req.headers["svix-timestamp"],
-    "svix-signature":req.he["svix-signature"]
+    "svix-signature":req.headers["svix-signature"]
   })
   const {data,type}=req.body
   switch(type){

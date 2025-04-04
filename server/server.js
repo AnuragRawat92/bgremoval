@@ -6,7 +6,7 @@ import userRouter from './routes/userRoutes.js';
 
 const PORT = process.env.PORT || 4000;
 const app = express();
- connectDB();
+ await connectDB();
 app.use(express.json());
 app.use(cors());
 
